@@ -1,0 +1,40 @@
+# ── secrets — never commit ──────────────────────────────────
+.env
+.env.local
+*.pem
+*.key
+
+# ── kept local, deliberately ────────────────────────────────
+# Strategic analysis, competitive assessment, and the full detection
+# rule. Held back while the hackathon is live (see docs/05-risks.md §8,
+# adversarial disclosure). Revisit before making the repo public.
+reference/
+CLAUDE.md
+probes/
+
+# ── node ────────────────────────────────────────────────────
+node_modules/
+dist/
+*.log
+
+# ── envio ───────────────────────────────────────────────────
+.envio/
+# NOTE: HyperIndex codegen output only. Do NOT broaden this to a bare
+# `generated/` — that also swallows CRE contract bindings, which ARE
+# required to build the workflow.
+generated/schema.graphql
+generated/src/
+
+# ── foundry ─────────────────────────────────────────────────
+out/
+cache/
+lib/
+broadcast/
+
+# ── cre build artifacts ─────────────────────────────────────
+.cre_build_tmp.js
+*.wasm
+latency-results.json
+
+# ── os ──────────────────────────────────────────────────────
+.DS_Store
