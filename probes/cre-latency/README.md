@@ -70,6 +70,8 @@ cp .env.example .env      # fill in DEPLOYER_PRIVATE_KEY (needs a little MON)
 #    "probeContractAddress": "0x..."
 
 # 3. deploy the workflow to the DON   [requires deploy access]
+#    Uses the private registry (see probe/workflow.yaml) — no linked wallet
+#    key, no ETH on Ethereum Mainnet, no registry gas.
 cre workflow deploy ./probe --target production-settings
 
 # 4. measure

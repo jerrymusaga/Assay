@@ -1,9 +1,16 @@
 # ==========================================================================
 # CRE WORKFLOW SETTINGS — Assay CRE latency probe
 # ==========================================================================
+# deployment-registry: "private" uses the Chainlink-hosted registry, authorized
+# by the CRE login session. No linked wallet key, no Ethereum Mainnet RPC, and
+# no ETH for registry gas — unlike "onchain:ethereum-mainnet", which needs all
+# three. This is a control-plane choice only; it does not affect how the
+# workflow executes on the DON. Limit is 3 workflows per organization.
+# ==========================================================================
 staging-settings:
   user-workflow:
     workflow-name: "assay-latency-probe-staging"
+    deployment-registry: "private"
   workflow-artifacts:
     workflow-path: "./main.ts"
     config-path: "./config.staging.json"
@@ -12,6 +19,7 @@ staging-settings:
 production-settings:
   user-workflow:
     workflow-name: "assay-latency-probe"
+    deployment-registry: "private"
   workflow-artifacts:
     workflow-path: "./main.ts"
     config-path: "./config.production.json"
