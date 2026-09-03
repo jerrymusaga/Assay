@@ -8,9 +8,12 @@
 # Strategic analysis, competitive assessment, and the full detection
 # rule. Held back while the hackathon is live (see docs/05-risks.md §8,
 # adversarial disclosure). Revisit before making the repo public.
+#
+# NOTE: probes/ is deliberately NOT excluded. It contains no rule
+# mechanics and no secrets - it is integration plumbing and is the
+# working evidence for the Chainlink CRE bounty.
 reference/
 CLAUDE.md
-probes/
 
 # ── node ────────────────────────────────────────────────────
 node_modules/

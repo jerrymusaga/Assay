@@ -1,0 +1,5 @@
+{
+  "chainSelectorName": "monad-mainnet",
+  "probeContractAddress": "0xREPLACE_AFTER_DEPLOY",
+  "isTestnet": false
+}
