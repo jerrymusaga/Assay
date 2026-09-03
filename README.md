@@ -24,7 +24,6 @@ Trust, Identity & AI Infrastructure.
 | `docs/01-product.md` | What the product is, user stories, what it does NOT do |
 | `docs/02-architecture.md` | Four layers, data flow, component responsibilities |
 | `docs/03-evidence.md` | The Echo incident, address poisoning, evaluation corpus |
-| `docs/04-hackathon.md` | Track, bounties, integrations, six-week plan |
 | `docs/05-risks.md` | Open risks and what kills the project |
 | `tasks/task-01-delta-reconstruction.md` | **START HERE.** The first thing to build. |
 

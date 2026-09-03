@@ -14,6 +14,10 @@
 # working evidence for the Chainlink CRE bounty.
 reference/
 CLAUDE.md
+# Bounty targeting, track rationale and the six-week plan. No upside to
+# publishing competitive strategy while the hackathon is live. Still on
+# disk; revisit after submission.
+docs/04-hackathon.md
 
 # ── node ────────────────────────────────────────────────────
 node_modules/
