@@ -47,15 +47,38 @@ and parallel scans overwhelmed even high-end nodes.
 
 Two consequences:
 
-1. **You cannot query lineage on demand.** The naive approach — look up history
-   when a deposit arrives — fails, because the history is not there. You must
-   have been indexing continuously. That is a real moat: a competitor arriving
-   later cannot backfill what the chain has already discarded.
+1. **You cannot query lineage on demand from an RPC node.** The naive
+   approach — look up history when a deposit arrives — fails against a pruned
+   node, because the history is not there. Lineage work needs an archive that
+   already holds it.
 
 2. **Envio is not a sponsor integration here, it is load-bearing.** Everywhere
    else HyperSync is a speed optimisation. On Monad it is the access path to
    data that no longer exists at the RPC layer. This is the strongest honest
    "why Envio" claim available in this hackathon.
+
+### Correction: there is no history moat
+
+An earlier draft of this document claimed that "a competitor arriving later
+cannot backfill what the chain has already discarded," and treated accumulated
+history as a defensible moat. **That claim is false, and it was checked.**
+
+HyperSync retains **full Monad history from block 0, traces included** —
+verified by query, not just by documentation. Any competitor with a free API
+token can reconstruct the identical fund-flow graph in an afternoon. The
+switching cost is approximately zero.
+
+The chain discards the data; HyperSync does not.
+
+What survives from the original argument is consequence 2, and it is
+*strengthened*: HyperSync genuinely is the only practical access path to
+historical Monad data, which is why it is load-bearing rather than decorative.
+What dies is the competitive moat stacked on top of it.
+
+**The honest differentiator is the classifier set and the integration depth,
+not data possession.** Say that instead. A judge who checks — and the check
+takes twenty minutes — will find the moat claim, and finding it would call
+everything else in this document into question.
 
 ## What Assay claims
 
